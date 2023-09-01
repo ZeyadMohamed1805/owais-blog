@@ -11,6 +11,7 @@ import { useColorMode } from "@chakra-ui/react";
 import styles from "@/styles/layout/header.module.css";
 // Switch Component
 const Switch = () => {
+    // Destruct Color Mode And Toggle Function
     const { colorMode, toggleColorMode } = useColorMode();
     // Active Switch Background
     const [ background, setBackground ] = useState( colorMode === "light" ? "primary" : "secondary" );

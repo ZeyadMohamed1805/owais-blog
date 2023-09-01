@@ -1,0 +1,15 @@
+.banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 100px;
+}
+
+.bannerContainer {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.bannerImage {
+    width: 100%;
+}

@@ -1,9 +1,11 @@
+// Imports
+import Banner from "@/components/home/Banner";
 // Homepage Component
 const Home = () => {
     // Return JSX Elements
     return (
         <div>
-            Home
+            <Banner />
         </div>
     )
 }
