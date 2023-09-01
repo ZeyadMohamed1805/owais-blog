@@ -5,9 +5,10 @@ import Link from "next/link";
 import Switch from "../custom/Switch";
 import { Flex, Button, Drawer, DrawerOverlay, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerBody, DrawerFooter } from "@/components/chakra/Chakra";
 import { navLinks } from "@/utils/constants";
+import { SidebarPropsType } from "@/utils/types";
 import styles from "@/styles/layout/header.module.css";
 // Sidebar Component
-const Sidebar = ( { isOpen, onClose }: any ) => {
+const Sidebar = ( { isOpen, onClose }: SidebarPropsType ) => {
     // Return JSX ELements
     return (
         <Drawer isOpen={ isOpen } onClose={ onClose }>

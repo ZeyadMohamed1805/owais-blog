@@ -17,6 +17,7 @@ import {
     DrawerBody,
     DrawerFooter
 } from "@chakra-ui/react";
+import { HamburgerIcon } from "@chakra-ui/icons";
 // Exports
 export { 
     Flex,
@@ -32,5 +33,6 @@ export {
     DrawerCloseButton,
     DrawerHeader,
     DrawerBody,
-    DrawerFooter
+    DrawerFooter,
+    HamburgerIcon
 };

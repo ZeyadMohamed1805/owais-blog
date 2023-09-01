@@ -7,28 +7,28 @@ import Moon from "../icons/Moon";
 import Sun from "../icons/Sun";
 import DarkSun from "../icons/DarkSun";
 import { useState } from "react";
+import { useColorMode } from "@chakra-ui/react";
 import styles from "@/styles/layout/header.module.css";
 // Switch Component
 const Switch = () => {
-    // Active Mode
-    const [ mode, setMode ] = useState( true );
+    const { colorMode, toggleColorMode } = useColorMode();
     // Active Switch Background
-    const [ background, setBackground ] = useState( "primary" );
+    const [ background, setBackground ] = useState( colorMode === "light" ? "primary" : "secondary" );
     // Active Icons
-    const [ icons, setIcons ] = useState( [ <DarkSun key={ "dark_sun" } />, <Moon key={ "moon" } /> ] );
+    const [ icons, setIcons ] = useState( colorMode === "light" ? [ <DarkSun key={ "dark_sun" } />, <Moon key={ "moon" } /> ] : [ <Sun key={ "sun" } />, <LightMoon key={ "light_moon" } /> ] );
     // Toggle Event
     const handleToggle = () => {
         // If Mode Is Light ( TRUE ), SET Mode To False And Change Active Icons And Background
-        if ( mode ) { 
-            setMode( false ); 
+        if ( colorMode === "light" ) { 
             setBackground( "secondary" );
-            setIcons( [ <Sun key={ "sun" } />, <LightMoon key={ "light_moon" } /> ] ) 
+            setIcons( [ <Sun key={ "sun" } />, <LightMoon key={ "light_moon" } /> ] );
+            toggleColorMode();
         }
         // Else, Set Mode To True And Change Active Icons And Background
         else { 
-            setMode( true ); 
             setBackground( "primary" ); 
-            setIcons( [ <DarkSun key={ "dark_sun" } />, <Moon key={ "moon" } /> ] ) 
+            setIcons( [ <DarkSun key={ "dark_sun" } />, <Moon key={ "moon" } /> ] ) ;
+            toggleColorMode();
         }
     }
     // Return JSX Elements

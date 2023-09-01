@@ -1,12 +1,12 @@
 // Imports
-import { Flex, Button, Heading } from "@/components/chakra/Chakra";
+import { Flex, Button, Heading, HamburgerIcon, Icon } from "@/components/chakra/Chakra";
 import Switch from "../custom/Switch";
-import Menu from "../icons/Menu";
 import Link from "next/link";
 import { navLinks } from "@/utils/constants";
+import { HeaderPropsType } from "@/utils/types";
 import styles from "@/styles/layout/header.module.css";
 // Header Component
-const Header = ( { onOpen }: any ) => {
+const Header = ( { onOpen }: HeaderPropsType ) => {
     // Return JSX Elements
     return (
         <header className={ styles.header }>
@@ -27,7 +27,7 @@ const Header = ( { onOpen }: any ) => {
                     </Button>
                     <Switch />
                 </Flex>
-                <Menu onOpen={ onOpen } />
+                <Icon as={ HamburgerIcon } onClick={ onOpen } className={ styles.menu } />
             </Flex>
         </header>
     )

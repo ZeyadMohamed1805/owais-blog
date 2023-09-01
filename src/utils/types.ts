@@ -6,7 +6,15 @@ export type LayoutPropsType = {
 }
 // Providers
 export type ProvidersPropsType = LayoutPropsType
-
+// Header
+export type HeaderPropsType = {
+    onOpen: () => void
+}
+// Sidebar
+export type SidebarPropsType = {
+    isOpen: boolean,
+    onClose: () => void
+}
 // Constants Types
 // ###############
 // Nav Link

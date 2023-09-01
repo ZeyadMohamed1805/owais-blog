@@ -1,7 +1,12 @@
 // Imports
 import { extendTheme } from "@chakra-ui/react";
 // Add Custom Values
-const theme = extendTheme( { 
+const theme = extendTheme( {
+    // Add Color Mode
+    config: {
+        initialColorMode: 'light',
+        useSystemColorMode: true
+    },
     // Custom Colors
     colors: {
         primary: "#FFFFFF",
