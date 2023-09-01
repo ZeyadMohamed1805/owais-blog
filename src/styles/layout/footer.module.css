@@ -2,12 +2,23 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 30px 100px;
 }
 
 .footerContainer {
     max-width: 1200px;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 15px;
+}
+
+@media ( max-width: 500px ) {
+    .footerContainer {
+        flex-direction: column-reverse;
+        justify-content: start;
+        align-items: center;
+        text-align: center;
+    }
 }

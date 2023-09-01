@@ -34,3 +34,37 @@
 .switchContent {
     gap: 15px;
 }
+
+.sidebarLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebarButtons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: none;
+    cursor: pointer;
+}
+
+@media ( max-width: 875px ) {
+    .headerLinks {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+}
+
+@media ( max-width: 400px ) {
+    .header {
+        padding: 30px 50px
+    }
+}

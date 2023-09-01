@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <footer className={ styles.footer }>
             <Flex className={ styles.footerContainer }>
-                <Text>
+                <Text className={ styles.footerText }>
                     &copy; 2023
                 </Text>
                 {

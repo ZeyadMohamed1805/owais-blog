@@ -15,20 +15,20 @@ const Switch = () => {
     // Active Switch Background
     const [ background, setBackground ] = useState( "primary" );
     // Active Icons
-    const [ icons, setIcons ] = useState( [ <DarkSun />, <Moon /> ] );
+    const [ icons, setIcons ] = useState( [ <DarkSun key={ "dark_sun" } />, <Moon key={ "moon" } /> ] );
     // Toggle Event
     const handleToggle = () => {
         // If Mode Is Light ( TRUE ), SET Mode To False And Change Active Icons And Background
         if ( mode ) { 
             setMode( false ); 
             setBackground( "secondary" );
-            setIcons( [ <Sun />, <LightMoon /> ] ) 
+            setIcons( [ <Sun key={ "sun" } />, <LightMoon key={ "light_moon" } /> ] ) 
         }
         // Else, Set Mode To True And Change Active Icons And Background
         else { 
             setMode( true ); 
             setBackground( "primary" ); 
-            setIcons( [ <DarkSun />, <Moon /> ] ) 
+            setIcons( [ <DarkSun key={ "dark_sun" } />, <Moon key={ "moon" } /> ] ) 
         }
     }
     // Return JSX Elements

@@ -1,11 +1,12 @@
 // Imports
 import { Flex, Button, Heading } from "@/components/chakra/Chakra";
 import Switch from "../custom/Switch";
+import Menu from "../icons/Menu";
 import Link from "next/link";
 import { navLinks } from "@/utils/constants";
 import styles from "@/styles/layout/header.module.css";
 // Header Component
-const Header = () => {
+const Header = ( { onOpen }: any ) => {
     // Return JSX Elements
     return (
         <header className={ styles.header }>
@@ -26,6 +27,7 @@ const Header = () => {
                     </Button>
                     <Switch />
                 </Flex>
+                <Menu onOpen={ onOpen } />
             </Flex>
         </header>
     )

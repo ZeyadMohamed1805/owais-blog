@@ -3,8 +3,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google'
 import Providers from '@/utils/Providers';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import Layout from '@/utils/Layouts';
 import { LayoutPropsType } from '@/utils/types';
 // MetaData
 export const metadata: Metadata = {
@@ -20,9 +19,9 @@ const RootLayout = ( { children }: LayoutPropsType ) => {
         <html lang="en">
             <body className={ inter.className }>
                 <Providers>
-                    <Header />
-                    { children }
-                    <Footer />
+                    <Layout>
+                        { children }
+                    </Layout>
                 </Providers>
             </body>
         </html>
