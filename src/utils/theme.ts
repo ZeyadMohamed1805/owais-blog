@@ -30,6 +30,19 @@ const theme = extendTheme( {
                 h2: { fontSize: "24px" },
                 h3: { fontSize: "18px" },
             }
+        },
+        Text: {
+            baseStyle: { fontSize: "16px" }
+        },
+        Button: {
+            variants: {
+                filled_cta: {
+                    backgroundColor: "call_to_action",
+                    color: "primary",
+                    fontWeight: "medium",
+                    transitionDuration: "0.25s"
+                }
+            }
         }
     }
  } );

@@ -1,0 +1,36 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 100px;
+}
+
+.headerContainer {
+    max-width: 1200px;
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerLinks {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.headerCTA:hover {
+    opacity: 0.5;
+}
+
+.switch {
+    border-radius: 50px;
+    display: grid;
+    place-items: center;
+    transition-duration: 0.25s;
+}
+
+.switchContent {
+    gap: 15px;
+}
